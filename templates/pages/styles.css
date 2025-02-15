@@ -1,0 +1,210 @@
+:root {
+    --light-background: #FFF7F0;
+    --light-text: #333333;
+    --dark-background: #1E1E1E;
+    --dark-text: #EEEEEE;
+    --pastel-orange: #FF7F50;
+    --pastel-orange-darker: #FF6347;
+    --dark-section-background: #333333;
+    --container-bg-light: #FFFFFF;
+    --container-bg-dark: #2C2C2C;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --box-shadow-color-dark: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-background);
+    color: var(--light-text);
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: var(--container-bg-light);
+    border-radius: 12px;
+    box-shadow: 0 5px 12px var(--box-shadow-color);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+header {
+    background-color: var(--pastel-orange);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0 25px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 8px;
+    margin-left: 25px;
+}
+
+section {
+    padding: 60px;
+    text-align: center;
+    background-color: var(--dark-section-background);
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+section h2 {
+    font-size: 2.7rem;
+    color: var(--pastel-orange);
+    margin-bottom: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #fff;
+    font-size: 2.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--pastel-orange);
+}
+
+footer {
+    background-color: var(--pastel-orange);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+}
+
+body.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+
+.container.dark-mode {
+    background-color: var(--container-bg-dark);
+    box-shadow: 0 5px 15px var(--box-shadow-color-dark);
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: var(--pastel-orange);
+    transition: transform 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+    padding: 0.6rem;
+    border-radius: 50%;
+}
+
+.dark-mode-toggle:hover {
+    transform: rotate(180deg);
+    color: var(--pastel-orange-darker);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+    font-size: 1.7rem;
+    margin: 0;
+    color: #333;
+}
+
+.close-btn {
+    background-color: var(--pastel-orange);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.close-btn:hover {
+    background-color: #FF6347;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 30px;
+        padding: 15px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 40px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .social-icons a {
+        font-size: 2rem;
+    }
+
+    .dark-mode-toggle {
+        font-size: 2rem;
+    }
+}
